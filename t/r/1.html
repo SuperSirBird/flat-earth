@@ -5,16 +5,19 @@
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("text-section").innerHTML = this.responseText;
+          document.getElementById("article").innerHTML = this.responseText;
         }
       };
       xhttp.open("GET", "https://supersirbird.github.io/flat-earth/t/01.txt", true);
       xhttp.send();
     </script>
+    <style>
+      textarea {resize:none}
+    </style>
   </head>
   <body>
     <div id="text-section">
-      Loading...
+      <textarea id="article" readonly></textarea>
     </div>
   </body>
 </html>
