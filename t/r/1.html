@@ -1,2 +1,19 @@
 <html>
+  <head>
+    <title>Round Earth Proof</title>
+    <script>
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("text-section").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("GET", "./t/01.txt", true);
+      xhttp.send();
+    </script>
+  </head>
+  <body>
+    <div id="text-section">
+      Loading...
+    </div>
+  </body>
 </html>
